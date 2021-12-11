@@ -135,8 +135,21 @@ ul {
   fill: var(--accent-color);
   outline: none;
 }
-.site-nav .link.current {
+.link.current {
   color: var(--accent-color);
+}
+.header-item {
+  position: relative;
+}
+.header-item::after {
+  content: "";
+  position: absolute;
+  top: 46px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
 }
 
 /* -------------------Герой------------------- */
@@ -201,14 +214,17 @@ ul {
 .feature-list {
   display: flex;
 }
-.feature-list .title {
-  color: var(--title-text-color);
+.feature-list .title,
+.business-list .title {
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+.feature-list .title {
   margin-bottom: 10px;
+  color: var(--title-text-color);
 }
 .feature-list .item {
   display: block;
@@ -235,8 +251,23 @@ ul {
 .card-img {
   display: block;
 }
+.business-list .item {
+  position: relative;
+}
 .business-list .item:not(:last-child) {
   margin-right: 30px;
+}
+.business-list .title {
+  color: var(--primary-white-color);
+}
+.business-item {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  text-align: center;
+  background-color: rgba(47, 48, 58, 0.8);
 }
 .command-list {
   display: flex;
